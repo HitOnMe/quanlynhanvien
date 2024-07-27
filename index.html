@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản Lý Sinh Viên</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <!-- Quản lý sinh viên -->
+      <div>
+        <h3>Quản Lý Sinh Viên</h3>
+        <form id="studentForm">
+          <div class="form-group">
+            <label for="studentId">Mã Sinh Viên</label>
+            <input type="text" class="form-control" id="studentId" required />
+          </div>
+          <div class="form-group">
+            <label for="studentName">Tên Sinh Viên</label>
+            <input type="text" class="form-control" id="studentName" required />
+          </div>
+          <div class="form-group">
+            <label for="studentType">Loại Sinh Viên</label>
+            <select class="form-control" id="studentType" required>
+              <option value="nghèo">Nghèo</option>
+              <option value="khá giả">Khá Giả</option>
+              <option value="giàu">Giàu</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="studentId">Email</label>
+            <input type="text" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label for="studentId">Mật khẩu</label>
+            <input type="password" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label for="mathScore">Điểm Toán</label>
+            <input type="number" class="form-control" id="mathScore" required />
+          </div>
+          <div class="form-group">
+            <label for="literatureScore">Điểm Văn</label>
+            <input
+              type="number"
+              class="form-control"
+              id="literatureScore"
+              required
+            />
+          </div>
+          <button type="button" class="btn btn-primary" onclick="addStudent()">
+            Thêm Sinh Viên
+          </button>
+        </form>
+      </div>
+      <!-- Danh sách sinh viên -->
+      <div>
+        <h3>Danh Sách Sinh Viên</h3>
+        <table class="table table-bordered" id="studentTable">
+          <thead>
+            <tr>
+              <th>Mã Sinh Viên</th>
+              <th>Tên Sinh Viên</th>
+              <th>Loại Sinh Viên</th>
+              <th>Điểm Toán</th>
+              <th>Điểm Văn</th>
+              <th>Điểm Trung Bình</th>
+              <th>Xếp Loại</th>
+              <th>Hành Động</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
